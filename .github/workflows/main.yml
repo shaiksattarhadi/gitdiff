@@ -47,6 +47,7 @@ jobs:
     - name: Get file diff
       run: |
         git diff --name-only remotes/origin/development remotes/origin/development > file_changes.txt
+        cat file_changes.txt
 
     - name: Filter pom.xml files
       run: |
