@@ -31,19 +31,19 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Get file diff
-      run: |
-        git branch -a
+
     - name: Checkout feature branch
       uses: actions/checkout@v2
       with:
-        ref: feature-branch
+        ref: feature
 
     - name: Checkout development branch
       uses: actions/checkout@v2
       with:
-        ref: development-branch
-
+        ref: development
+    - name: Get file diff
+      run: |
+        git branch -a
     - name: Get file diff
       run: |
         git diff --name-only development-branch feature-branch > file_changes.txt
