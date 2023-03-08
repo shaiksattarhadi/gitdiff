@@ -23,7 +23,7 @@ on:
     - auto_merge_enabled
     - auto_merge_disabled
     branches:
-    - Development
+    - development
     
     
 jobs:
