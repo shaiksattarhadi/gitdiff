@@ -65,6 +65,6 @@ jobs:
       run: |
         while read -r line; do
           cd "$line"
-          mvn clean
+          mvn -B clean package -s .maven/settings.xml
           cd ..
         done < directories_with_pom_changes.txt
