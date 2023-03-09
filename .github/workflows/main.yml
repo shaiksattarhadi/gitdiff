@@ -47,7 +47,7 @@ jobs:
       run: |
         #git diff remotes/origin/development..remotes/origin/feature -- **/pom.xml >> file_changes.txt
         #cat file_changes.txt
-        git diff remotes/origin/development/**pom.xml remotes/origin/feature/**pom.xml  >> file_changes.txt
+        git diff remotes/origin/development/* remotes/origin/feature/*  >> file_changes.txt
         cat file_changes.txt        
         
     - name: Filter pom.xml files
