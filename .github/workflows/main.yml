@@ -40,14 +40,14 @@ jobs:
       uses: actions/checkout@v2
       with:
         ref: development
-    - name: Get branches all
-      run: |
-        git branch -a        
+    #- name: Get branches all
+      #run: |
+        #git branch -a        
     - name: Get file diff
       run: |
         #git diff remotes/origin/development..remotes/origin/feature -- **/pom.xml >> file_changes.txt
         #cat file_changes.txt
-        git diff remotes/origin/development/**/pom.xml remotes/origin/feature/**/pom.xml  >> file_changes.txt
+        git diff remotes/origin/development..remotes/origin/feature  >> file_changes.txt
         cat file_changes.txt        
         
     - name: Filter pom.xml files
